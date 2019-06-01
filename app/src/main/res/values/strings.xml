@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">Curatis</string>
+    <string name="app_name">Curantis</string>
+    <string name="main_featurehint">Enter feature here.</string>
+    <string name="main_generate">Generate!</string>
+    <string name="all_placeholder">PLACEHOLDER</string>
 </resources>

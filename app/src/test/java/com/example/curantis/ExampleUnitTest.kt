@@ -1,4 +1,4 @@
-package com.example.curatis
+package com.example.curantis
 
 import org.junit.Test
 

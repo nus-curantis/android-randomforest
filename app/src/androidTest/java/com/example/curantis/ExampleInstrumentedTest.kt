@@ -1,4 +1,4 @@
-package com.example.curatis
+package com.example.curantis
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
