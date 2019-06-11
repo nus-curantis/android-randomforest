@@ -2,7 +2,6 @@ package com.example.curantis
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -12,15 +11,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun generateAction(view: View) {
+    fun generateAction() {
 
-        // Retrieve feature input
-        // val editText = findViewById<EditText>(R.id.edittext_main_feature)
-        // val featureToAnalyze = editText.toString()
+        // Generate model
+        ModelGenerator.trainClassifier("something.csv", "classifierSave.model")
 
         // Display action
         val textView = findViewById<TextView>(R.id.textview_main_humanaction)
         textView.text = getString(R.string.all_placeholder)
+
     }
 
 }
