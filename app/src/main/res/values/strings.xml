@@ -3,4 +3,18 @@
     <string name="main_featurehint">Enter feature here.</string>
     <string name="main_generate">Generate!</string>
     <string name="all_placeholder">PLACEHOLDER</string>
+    <string name="main_brushteeth">Brush teeth</string>
+    <string name="main_climbstairs">Climb stairs</string>
+    <string name="main_combhair">Comb hair</string>
+    <string name="main_descendstairs">Descend stairs</string>
+    <string name="main_drinkglass">Drink glass</string>
+    <string name="main_eatmeat">Eat meat</string>
+    <string name="main_eatsoup">Eat soup</string>
+    <string name="main_getupbed">Get up bed</string>
+    <string name="main_liedownbed">Lie down bed</string>
+    <string name="main_pourwater">Pour water</string>
+    <string name="main_sitdownchair">Sit down chair</string>
+    <string name="main_standupchair">Stand up chair</string>
+    <string name="main_usetelephone">Use telephone</string>
+    <string name="main_walk">Walk</string>
 </resources>
