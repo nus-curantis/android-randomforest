@@ -5,6 +5,7 @@ import weka.classifiers.trees.RandomForest
 import weka.core.Instances
 import weka.core.SerializationHelper
 import weka.core.converters.CSVLoader
+
 import java.io.File
 
 object ModelGenerator{
