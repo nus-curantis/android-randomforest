@@ -7,9 +7,12 @@ import weka.core.SerializationHelper
 import weka.core.converters.CSVLoader
 
 import java.io.File
+import java.io.IOException
+import java.lang.Exception
 
 object ModelGenerator{
 
+    @Throws(Exception::class)
     fun trainClassifier(trainingDataPath: String, classifierSavePath: String) {
 
         val trainingData = loadTrainingData(trainingDataPath)
@@ -19,6 +22,7 @@ object ModelGenerator{
         saveClassifier(classifierSavePath, classifier)
     }
 
+    @Throws(IOException::class)
     private fun loadTrainingData(trainingDataPath: String): Instances {
 
         val csvLoader = CSVLoader()
@@ -30,6 +34,7 @@ object ModelGenerator{
         return trainingData
     }
 
+    @Throws(Exception::class)
     private fun buildClassifier(trainingData: Instances): Classifier {
 
         val classifier = RandomForest()
@@ -38,6 +43,7 @@ object ModelGenerator{
         return classifier
     }
 
+    @Throws(Exception::class)
     private fun saveClassifier(classifierSavePath: String, classifier: Classifier) {
 
         SerializationHelper.write(classifierSavePath, classifier)
