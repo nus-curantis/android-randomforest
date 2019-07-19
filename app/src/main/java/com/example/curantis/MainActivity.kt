@@ -1,5 +1,6 @@
 package com.example.curantis
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 
 import android.os.Bundle
@@ -13,18 +14,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val savedFilePath = this.filesDir.absolutePath + "classifier.model"
-
-        if (!isFileExist(savedFilePath)) {
-            ModelGenerator.createNewModel(applicationContext, savedFilePath)
-        }
-
         setContentView(R.layout.activity_main)
     }
 
-    fun onClick(view: View) {
+    fun onClickGenerate() {
 
-        val classifier = DataClassifier.loadModel(this.filesDir.absolutePath + "classifier.model")
+        val classifier = DataClassifier.loadModel(applicationContext, "randomforest")
 
         val data = DataClassifier.getData()
 
@@ -36,8 +31,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun isFileExist(filePath: String): Boolean {
+    fun onClickSensorApp (){
 
-        return File(filePath).exists()
+        val launchIntent = packageManager.getLaunchIntentForPackage("pl.projektorion.krzysztof.blesensortag")
+
+        if (launchIntent != null) {
+            launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(launchIntent)
+        }
     }
 }

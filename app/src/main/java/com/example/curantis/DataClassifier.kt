@@ -1,15 +1,47 @@
 package com.example.curantis
 
+import android.content.Context
+
 import weka.classifiers.Classifier
+import weka.classifiers.trees.RandomForest
 import weka.core.Attribute
 import weka.core.DenseInstance
 import weka.core.Instances
 import weka.core.SerializationHelper
+import weka.core.converters.ConverterUtils
 
 object DataClassifier {
 
-    fun loadModel(filePath: String): Classifier{
-        return (SerializationHelper.read(filePath) as Classifier)
+    fun loadModel(context: Context, fileName: String): Classifier{
+
+        val resourceId = context.resources.getIdentifier(fileName, "raw", context.packageName)
+        val inputStream = context.resources.openRawResource(resourceId)
+
+        return SerializationHelper.read(inputStream) as RandomForest
+    }
+
+    fun loadData(context: Context, fileName: String): Instances {
+
+        val resourceId = context.resources.getIdentifier(fileName, "raw", context.packageName)
+        val inputStream = context.resources.openRawResource(resourceId)
+
+        val source = ConverterUtils.DataSource(inputStream)
+        val data = source.dataSet
+        data.setClassIndex(0)
+
+        return data
+    }
+
+    fun classifyData(data: Instances, classifier: Classifier): Double {
+
+        var results = 0.0
+
+        for (instance in data) {
+            results += classifier.classifyInstance(instance)
+        }
+
+        return results
+
     }
 
     fun getData(): Instances {
