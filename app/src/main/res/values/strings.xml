@@ -2,6 +2,7 @@
     <string name="app_name">Curantis</string>
     <string name="main_featurehint">Enter feature here.</string>
     <string name="main_generate">Generate!</string>
+    <string name="main_opensensorapp">To sensor app.</string>
     <string name="all_placeholder">PLACEHOLDER</string>
     <string name="main_brushteeth">Brush teeth</string>
     <string name="main_climbstairs">Climb stairs</string>
