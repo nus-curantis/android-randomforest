@@ -11,14 +11,14 @@ import com.nus.curantis.R
 import java.util.ArrayList
 
 class FoundBTDevicesAdapter(context: Context, private val arrayFoundDevices: ArrayList<BluetoothObject>) :
-    ArrayAdapter<BluetoothObject>(context, R.layout.row_bt_scan_new_devices, arrayFoundDevices) {
+    ArrayAdapter<BluetoothObject>(context, R.layout.activity_scan_bluetooth_devices, arrayFoundDevices) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val bluetoothObject = arrayFoundDevices[position]
 
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
-        val rowView = inflater.inflate(R.layout.row_bt_scan_new_devices, parent, false)
+        val rowView = inflater.inflate(R.layout.activity_scan_bluetooth_devices, parent, false)
 
         val bluetoothName = rowView.findViewById(R.id.textview_bt_scan_name) as TextView
         val bluetoothAddress = rowView.findViewById(R.id.textview_bt_scan_address) as TextView
