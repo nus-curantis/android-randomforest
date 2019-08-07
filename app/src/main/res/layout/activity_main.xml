@@ -46,6 +46,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+            android:id="@+id/button_show_paired_devices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="onClickShowPairedDevice"
+            android:text="@string/main_showpaireddevices"
+            app:layout_constraintEnd_toEndOf="@+id/button_main_generate"
+            app:layout_constraintTop_toBottomOf="@+id/button_open_sensor_application" android:layout_marginEnd="196dp"
+            android:layout_marginRight="196dp"/>
+
+    <Button
         android:id="@+id/button_open_sensor_application"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,4 +65,36 @@
         android:text="@string/main_opensensorapp"
         app:layout_constraintEnd_toEndOf="@+id/button_main_generate"
         app:layout_constraintTop_toBottomOf="@+id/button_main_generate" />
+
+    <ListView
+        android:id="@+id/list_main_bluetoothdevices"
+        android:layout_width="0dp"
+        android:layout_height="393dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_main_humanaction"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_scan_devices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="onClickScanDevices"
+        android:text="@string/main_scandevices"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button_show_paired_devices"
+        app:layout_constraintTop_toBottomOf="@+id/button_open_sensor_application" />
 </androidx.constraintlayout.widget.ConstraintLayout>
