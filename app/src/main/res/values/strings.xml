@@ -18,4 +18,6 @@
     <string name="main_standupchair">Stand up chair</string>
     <string name="main_usetelephone">Use telephone</string>
     <string name="main_walk">Walk</string>
+    <string name="main_showpaireddevices">Show Paired Devices</string>
+    <string name="main_scandevices">Scan Devices</string>
 </resources>
