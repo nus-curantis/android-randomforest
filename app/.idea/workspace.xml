@@ -10,22 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34ff4135-4d71-47bf-8a82-d5193aae9ce8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nus/curantis/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nus/curantis/ScanBluetoothDevicesActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nus/curantis/bluetooth/BluetoothObject.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nus/curantis/bluetooth/FoundBTDevicesAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/row_bt_scan_new_devices.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/androidTest/java/com/example/curantis/DataClassifierTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/androidTest/java/com/nus/curantis/DataClassifierTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/androidTest/java/com/example/curantis/ModelGeneratorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/androidTest/java/com/nus/curantis/ModelGeneratorTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/curantis/DataClassifier.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nus/curantis/classifier/DataClassifier.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/androidTest/java/com/example/curantis/DataClassifierTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/androidTest/java/com/example/curantis/ModelGeneratorTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/curantis/DataClassifier.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/curantis/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/curantis/ModelGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nus/curantis/classifier/ModelGenerator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/curantis/ModelGenerator.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../build.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

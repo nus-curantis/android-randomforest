@@ -1,4 +1,4 @@
-package com.example.curantis
+package com.nus.curantis.classifier
 
 import android.content.Context
 

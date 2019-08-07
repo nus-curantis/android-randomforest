@@ -1,7 +1,8 @@
-package com.example.curantis
+package com.nus.curantis
 
 import androidx.test.rule.ActivityTestRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.nus.curantis.classifier.ModelGenerator
 
 import org.junit.Assert.*
 import org.junit.Rule
