@@ -1,6 +1,7 @@
 package com.nus.curantis.classifier
 
 import android.content.Context
+import com.nus.curantis.R
 
 import weka.classifiers.Classifier
 import weka.classifiers.trees.RandomForest
@@ -45,25 +46,25 @@ object DataClassifier {
     }
 
     fun getData(): Instances {
-/*
-        // Row 2 Label 5
-        val xMean = -0.0359242756
-        val yMean = -0.0484093559
-        val zMean = 0.1241743295
-        val xStd = 0.0207383921
-        val yStd = 0.0200620169
-        val zStd = 0.0111291944
-        val xyCorr = -0.61619785
-        val xzCorr = 0.1015040842
-        val yzCorr = 0.2711583038
-        val xEnergy = 0.1027181954
-        val yEnergy = 0.1736098818
-        val zEnergy = 1.0560061627
-        val pitch = -0.1297794478
-        val roll = -0.1615366741
-        val yaw = 0.404065586
-*/
 
+
+        val xMean = 0.246037802
+        val yMean = -0.050342136
+        val zMean = 0.021387749
+        val xStd = 0.039795003
+        val yStd = 0.020056196
+        val zStd = 0.022621295
+        val xyCorr = 0.142001582
+        val xzCorr = -0.58137519
+        val yzCorr = -0.137526038
+        val xEnergy = 4.183126519
+        val yEnergy = 0.1866373
+        val zEnergy = 0.048656738
+        val pitch = 0.965729827
+        val roll = -0.097042927
+        val yaw = 0.048309932
+
+        /*
         // Row 64 Label 5
         val xMean = 0.0181867812
         val yMean = -0.021516588
@@ -80,41 +81,7 @@ object DataClassifier {
         val pitch = 0.0376445467
         val roll = -0.0411658387
         val yaw = 1.3479986243
-/*
-        // Row 3 Label 5
-        val xMean = 0.0103641086
-        val yMean = -0.0302412245
-        val zMean = 0.1353251132
-        val xStd = 0.003878063
-        val yStd = 0.0074936862
-        val zStd = 0.0082458532
-        val xyCorr = -0.1366039348
-        val xzCorr = -0.1593848051
-        val yzCorr = 0.4323666662
-        val xEnergy = 0.0078567852
-        val yEnergy = 0.0643214771
-        val zEnergy = 1.2515594742
-        val pitch = 0.0319606774
-        val roll = -0.0790641114
-        val yaw = 0.764912862
-
-        // Row 78 Label 4
-        val xMean = 0.0114220514
-        val yMean = -0.0423821345
-        val zMean = 0.2475602894
-        val xStd = 0.020405485
-        val yStd = 0.02853998
-        val zStd = 0.0238288489
-        val xyCorr = -0.421263661
-        val xzCorr = 0.2432958802
-        val yzCorr = 0.2067590397
-        val xEnergy = 0.0231311417
-        val yEnergy = 0.1506014727
-        val zEnergy = 4.2000736728
-        val pitch = 0.0252107941
-        val roll = -0.0830896054
-        val yaw = -0.0830896054*/
-
+*/
         val attributes = ArrayList<Attribute>(16)
 
         val labels = ArrayList<String>()
@@ -183,5 +150,29 @@ object DataClassifier {
 
     fun classifyData(classifier: Classifier, data: Instances): Double {
         return classifier.classifyInstance(data.instance(0))
+    }
+
+    fun getActivity(value: Int) : Int {
+        when(value) {
+            0 -> return R.string.main_walkingactivity
+            1 -> return R.string.main_runningactivity
+            2 -> return R.string.main_commuteactivity
+            3 -> return R.string.main_eatingforkandspoonactivity
+            4 -> return R.string.main_mobilephoneactivity
+            5 -> return R.string.main_workingonlaptopactivity
+            6 -> return R.string.main_sittingactivity
+            7 -> return R.string.main_washinghandsactivity
+            8 -> return R.string.main_eatinghandsactivity
+            9 -> return R.string.main_conversingactivity
+            10 -> return R.string.main_elevatoractivity
+            11 -> return R.string.main_openingdooractivity
+            12 -> return R.string.main_standingactivity
+            13 -> return R.string.main_climbingupstairsactivity
+            14 -> return R.string.main_joggingactivity
+            15 -> return R.string.main_videochatactivity
+            else -> {
+                return R.string.main_untaggedactivity
+            }
+        }
     }
 }

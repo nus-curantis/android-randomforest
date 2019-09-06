@@ -35,11 +35,13 @@ class MainActivity : AppCompatActivity() {
 
         val data = DataClassifier.getData()
 
-        val value = DataClassifier.classifyData(classifier, data)
+        val value = DataClassifier.classifyData(classifier, data).toInt()
+
+        val activity = DataClassifier.getActivity(value)
 
         // Display action
         val textView = findViewById<TextView>(R.id.textview_main_humanaction)
-        textView.text = value.toString()
+        textView.text = resources.getString(activity)
 
     }
 
